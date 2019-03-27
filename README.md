@@ -1,2 +1,2 @@
 # Pogoda-Jutra
-Aplikacja pogodowa 
+Projekt na trzeci tydzień coders camp.
