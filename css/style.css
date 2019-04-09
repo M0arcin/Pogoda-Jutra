@@ -1,3 +1,7 @@
+/*forecast for easier work*/
 .weatherIcon img {
     width: 80px;
+}
+.forecast {
+    border: 1px solid red;
 }

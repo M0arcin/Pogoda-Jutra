@@ -23,9 +23,12 @@ fetch(url)
 
     //Forecast 5 days, every 3 hour//
     //should be inside getCity function//
-let timeValue = document.querySelectorAll('.time');
-let weatherIcon = document.querySelectorAll('.weatherIcon');
-let temp = document.querySelectorAll('.temperature');
+let weatherIcon = document.querySelectorAll('.day .weatherIcon');
+let weatherIconNight = document.querySelectorAll('.night .weatherIcon');
+let temp = document.querySelectorAll('.day .temperature');
+let tempNight = document.querySelectorAll('.night .temperature');
+let conditionsForecast = document.querySelectorAll('.day .conditions-forecast');
+let conditionsForecastNight = document.querySelectorAll('.night .conditions-forecast');
 let urlForecast = `https://api.openweathermap.org/data/2.5/forecast?q=${cityNameFromSearchWindow}&units=metric&lang=pl&appid=64bff84570f2309bb275adddc338b250`;
 
 fetch(urlForecast)
@@ -35,7 +38,7 @@ fetch(urlForecast)
     .then((response) => {
         for (let i = 1;  /*i < 26*/response.list[i] !== undefined; i++) {
             let iconCode$ = response.list[i].weather[0].icon; //kod ikonki pogody
-            let icon$ = `<img src="media/${iconCode$}.png">`; //link do odpowiedniej ikonki pogody
+            //let icon$ = `<img src="media/${iconCode$}.png">`; //link do odpowiedniej ikonki pogody
             let weatherConditions$ = response.list[i].weather[0].description; //opis pogody
             let temperature$ = Math.round(response.list[i].main.temp); //temperatura, stopnie celsjusza
             let pressure$ = response.list[i].main.pressure; //ciśnienie
@@ -45,9 +48,42 @@ fetch(urlForecast)
             forecastDate = forecastDate.split(' ');
             let date = forecastDate[0].split('-').reverse().splice(0, 2).join('.'); //data
             let time = forecastDate[1].slice(0, 5); //godzina
-            timeValue[i - 1].innerText = time;  
-            weatherIcon[i - 1].innerHTML = icon$;
-            temp[i - 1].innerText = `${temperature$}°C`;
+            
+            let j = 0;
+            let nextDaysTemp = [];
+            let icons = [];
+            let conditions = [];
+            for (let i = 1; i < 5; i++) {
+                while (new Date(response.list[j].dt_txt).getHours() != 12) {
+                    j++;
+                }
+                nextDaysTemp.push(response.list[j].main.temp);
+                icons.push(response.list[j].weather[0].icon);
+                conditions.push(response.list[j].weather[0].description);
+                j++;
+                
+            } 
+            
+            let m = 0;
+            let nextDaysTempNight = [];
+            let iconsNight = [];
+            for (let i = 1; i < 5; i++) {
+                while (new Date(response.list[m].dt_txt).getHours() != 0) {
+                    m++;
+                }
+                nextDaysTempNight.push(response.list[m].main.temp);
+                iconsNight.push(response.list[m].weather[0].icon);
+                
+                m++;
+            }
+            for (let i = 0; i < nextDaysTemp.length; i++) {
+                weatherIcon[i].innerHTML = `<img src="media/${icons[i]}.png">`;
+                conditionsForecast[i].innerText = conditions[i];
+                temp[i].innerText = `${Math.round(nextDaysTemp[i])} °C`;
+                weatherIconNight[i].innerHTML = `<img src="media/${iconsNight[i]}.png">`;
+                tempNight[i].innerText = `${Math.round(nextDaysTempNight[i])} °C`;
+            }
+            
         }
             
           
