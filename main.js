@@ -9,7 +9,7 @@ fetch(url)
     .then((response) => {
         let cityName = response.name;
         let iconCode = response.weather[0].icon; //kod ikonki pogody
-        let icon = `http://openweathermap.org/img/w/${iconCode}.png`; //link do odpowiedniej ikonki pogody z tych, które proponuje openweathermap
+        let icon = `<img src="media/${iconCode}.png">`; //link do odpowiedniej ikonki pogody
         let weatherConditions = response.weather[0].description; //opis pogody; tego nie było na liście Marcina, więc jest ewentualnym dodatkiem
         let temperature = response.main.temp; //temperatura, stopnie celsjusza
         let pressure = response.main.pressure; //ciśnienie
@@ -17,7 +17,6 @@ fetch(url)
         let windSpeed = response.wind.speed; //prędkość wiatru; też nie było na liście 
         let windDirection = response.wind.deg; //kierunek wiatru; też nie było na liście
         //znaczenia do obiektów html musimy wstawiać tutaj wewnątrz funkcji, bo na zewnątrz nie sa dostępne
-        
     })
 
 
@@ -36,7 +35,7 @@ fetch(urlForecast)
     .then((response) => {
         for (let i = 1;  /*i < 26*/response.list[i] !== undefined; i++) {
             let iconCode$ = response.list[i].weather[0].icon; //kod ikonki pogody
-            let icon$ = `http://openweathermap.org/img/w/${iconCode$}.png`; //link do odpowiedniej ikonki pogody z tych, które proponuje openweathermap
+            let icon$ = `<img src="media/${iconCode$}.png">`; //link do odpowiedniej ikonki pogody
             let weatherConditions$ = response.list[i].weather[0].description; //opis pogody
             let temperature$ = Math.round(response.list[i].main.temp); //temperatura, stopnie celsjusza
             let pressure$ = response.list[i].main.pressure; //ciśnienie
@@ -47,7 +46,7 @@ fetch(urlForecast)
             let date = forecastDate[0].split('-').reverse().splice(0, 2).join('.'); //data
             let time = forecastDate[1].slice(0, 5); //godzina
             timeValue[i - 1].innerText = time;  
-            weatherIcon[i - 1].innerHTML = `<img src="${icon$}">`;
+            weatherIcon[i - 1].innerHTML = icon$;
             temp[i - 1].innerText = `${temperature$}°C`;
         }
             
