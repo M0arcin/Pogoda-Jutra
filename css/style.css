@@ -4,6 +4,7 @@ body {
     padding: 0px;
     margin: 0px;
     height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
 }
 *{
     box-sizing: inherit;
@@ -14,32 +15,33 @@ body {
     width: 100vw;
 }
 .container{
-    background-color: green;
+    /*background-color: green;*/
+    display: inline-block;
     width: 100vw;
+
 }
+
 h3{
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     margin: 0 auto;
-    background-color: aliceblue;
 }
 form{
     text-align: center;
-    background-color: aquamarine;
     margin-left: 20%;
     margin-right: 20%;
 }
 .today{
-    background-color: wheat;
     width: 80vw;
     height: 20vh;
     text-align: center;
     margin: auto;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
-.conidition {
+.condition {
     height: 100%;
     width: 16%;
+
 }
 
 #cityNameBox{
@@ -47,14 +49,15 @@ form{
     width: 20%;
     float: left;
     border: green solid 1px;
-    font-size: 3rem;
+    font-size: 2rem;
     padding-top: 30px;
+    inline-size: 20%;
     
 }
 #temperatureBox{
     border: green solid 1px;
     float: left;
-    font-size: 64px;
+    font-size: 2rem;
     display: inline-block;
     font-weight: 300;
     position: relative;
@@ -64,19 +67,19 @@ form{
 #pressureBox {
     border: green solid 1px;
     float: left;
-    font-size: 3rem;
+    font-size: 2rem;
     padding-top: 30px;
 }
 #humidityBox{
     border: green solid 1px;
     float: left;
-    font-size: 3rem;
+    font-size: 2rem;
     padding-top: 30px;
 }
 #windSpeedBox{
     border: green solid 1px;
     float: left;
-    font-size: 3rem;
+    font-size: 2rem;
     padding-top: 30px;
 }
 
@@ -87,21 +90,20 @@ form{
     height: 100%;
     width: 16%;
 }
-#wheatherBox{
+#weatherBox{
     margin-right: 0;
     height: 30%;
     width: 100%;
     padding-top: 12px;
     font-weight: 300;
 }
-#imgW{
+#weatherBox img{
     display: block;
-    height: 70%;
-    width: 100%;
+    width:100%;
+    
 }
 
 h1{
-    background-color: grey;
     padding: 0;
     margin: 0;
     text-align: center;
@@ -113,11 +115,13 @@ h1{
 
 .forecast{
     box-sizing: border-box;
-    background-color:blue;
-    height: 55vh;
+    background-color:#87CEFA;
+    height: 45vh;
     width: 90%;
     margin: 0 auto;
-    border: 1px solid red;
+    text-align: center;
+    
+    /*border: 1px solid red;*/
 
 }
 /*forecast for easier work*/
@@ -128,9 +132,19 @@ h1{
     width: 12.5%;
     float: left;
 }
+.forecast .weatherIcon img {
+    align-self: center;
+}
+.forecast .night {
+    background-color:#4169E1;
+}
 #forecast1{
     display: flex;
     flex-direction: column;
     justify-content: space-around; 
+}
+
+.forecast>.temperature {
+    font-size: 2rem;
 }
 
