@@ -15,75 +15,117 @@
           </div>
         </header>
 
-
-    <!-- Forecast  -->
-    
-    
-    <div class="forecast day">
-        <div class="weatherIcon"></div>
-        <p class="conditions-forecast"></p>
-        <p class="temperature"></p>
-    </div>
-    <div class="forecast night">
-         <div class="weatherIcon"></div>         
-         <p class="conditions-forecast"></p>
-        <p class="temperature"></p>
-    </div>
-    <div class="forecast day">
-         <div class="weatherIcon"></div>         
-         <p class="conditions-forecast"></p>
-        <p class="temperature"></p>
-    </div>
-    <div class="forecast night">
-         <div class="weatherIcon"></div>         
-         <p class="conditions-forecast"></p>
-        <p class="temperature"></p>
-    </div>
-    <div class="forecast day">
-         <div class="weatherIcon"></div>         
-         <p class="conditions-forecast"></p>
-        <p class="temperature"></p>
-    </div>
-    <div class="forecast night">
-         <div class="weatherIcon"></div>         
-         <p class="conditions-forecast"></p>
-        <p class="temperature"></p>
-    </div>
-    <div class="forecast day">
-         <div class="weatherIcon"></div>         
-         <p class="conditions-forecast"></p>
-        <p class="temperature"></p>
-    </div>
-    <div class="forecast night">
-         <div class="weatherIcon"></div>         
-         <p class="conditions-forecast"></p>
-        <p class="temperature"></p>
-    </div>
-    
-<!-- Forecast end-->
-
-
-        <div class="container">
-              <h3>Wybierz miasto</h3>
-          <form>
-              <input type="text" id="city">
-              <input type="submit" value="Szukaj">
-          </form>
-          <button onclick="getLocation()">ikona lokalizacji</button>
-          <div class="today">
+    <div class="container">
+        <h3>Wybierz miasto</h3>
+        <form>
+            <input type="text" id="city">
+            <input type="submit" value="Szukaj">
+        </form>
+        <button onclick="getLocation()">ikona lokalizacji</button>
+        <div class="today">
             <div class="conidition" id="cityNameBox">Miasto</div>
             <div class="conidition" id="temperatureBox">99<span>°</span></div>
             <div id="imageParams">
-            <span class="conidition" id="imgW">obrazek</span>
-            <div class="conidition" id="wheatherBox">Bezchmurnie</div>
+                <div class="conidition" id="imgW">obrazek</div>
+                <div class="conidition" id="wheatherBox">Bezchmurnie</div>
             </div>
             <div class="conidition" id="pressureBox">1102</div>
             <div class="conidition" id="humidityBox">22</div>
             <div class="conidition" id="windSpeedBox">43</div>
-          </div>
-          <div class="forecast" id="simple1">
+        </div>
+        <!-- Forecast  -->
+        <div class="forecast-container">
+            <div class="forecast-for-one-day">
+                <h2 class="date"></h2>
+                <div class="forecast day">
+                    <div class="weatherIcon"></div>
+                    <p class="conditions-forecast"></p>
+                    <p class="temperature"></p>
+                </div>
+                <div class="forecast night">
+                    <div class="weatherIcon"></div>
+                    <p class="conditions-forecast"></p>
+                    <p class="temperature"></p>
+                </div>
+            </div>
+            <div class="forecast-for-one-day">
+                <h2 class="date"></h2>
+                <div class="forecast day">
+                    <div class="weatherIcon"></div>
+                    <p class="conditions-forecast"></p>
+                    <p class="temperature"></p>
+                </div>
+                <div class="forecast night">
+                    <div class="weatherIcon"></div>
+                    <p class="conditions-forecast"></p>
+                    <p class="temperature"></p>
+                </div>
+            </div>
+            <div class="forecast-for-one-day">
+                <h2 class="date"></h2>
+                <div class="forecast day">
+                    <div class="weatherIcon"></div>
+                    <p class="conditions-forecast"></p>
+                    <p class="temperature"></p>
+                </div>
+                <div class="forecast night">
+                    <div class="weatherIcon"></div>
+                    <p class="conditions-forecast"></p>
+                    <p class="temperature"></p>
+                </div>
+            </div>
+            <div class="forecast-for-one-day">
+                <h2 class="date"></h2>
+                <div class="forecast day">
+                    <div class="weatherIcon"></div>
+                    <p class="conditions-forecast"></p>
+                    <p class="temperature"></p>
+                </div>
+                <div class="forecast night">
+                    <div class="weatherIcon"></div>
+                    <p class="conditions-forecast"></p>
+                    <p class="temperature"></p>
+                </div>
+            </div>
+            <!--
+ <div class="forecast day">
+                <div class="weatherIcon"></div>
+                <p class="conditions-forecast"></p>
+                <p class="temperature"></p>
+            </div>
+            <div class="forecast night">
+                <div class="weatherIcon"></div>
+                <p class="conditions-forecast"></p>
+                <p class="temperature"></p>
+            </div>
+            <div class="forecast day">
+                <div class="weatherIcon"></div>
+                <p class="conditions-forecast"></p>
+                <p class="temperature"></p>
+            </div>
+            <div class="forecast night">
+                <div class="weatherIcon"></div>
+                <p class="conditions-forecast"></p>
+                <p class="temperature"></p>
+            </div>
+            <div class="forecast day">
+                <div class="weatherIcon"></div>
+                <p class="conditions-forecast"></p>
+                <p class="temperature"></p>
+            </div>
+            <div class="forecast night">
+                <div class="weatherIcon"></div>
+                <p class="conditions-forecast"></p>
+                <p class="temperature"></p>
+            </div>
+            
 
-          </div>
+            -->
+           
+           
+        </div>
+    <!-- Forecast end-->
+     
     </div>
 
     <!-- Main js  -->

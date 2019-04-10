@@ -117,4 +117,4 @@ fetch(urlForecast)
             }
             
         }
-            
+    })        

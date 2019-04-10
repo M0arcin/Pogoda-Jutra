@@ -1,21 +1,16 @@
-
-/*forecast for easier work*/
-.weatherIcon img {
-    width: 80px;
+* {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+    border: 0;
 }
-
 body {
     box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
     height: 100vh;
     background-color: aquamarine;
 }
-*{
-    box-sizing: inherit;
-}
-.wraper{
-    margin:auto;
+.wraper {
+    margin: auto;
     height: 100vh;
     width: 100vw;
 }
@@ -23,22 +18,22 @@ body {
     background-color: green;
     width: 100vw;
 }
-h3{
+h3 {
     text-align: center;
     font-size: 30px;
     margin: 0 auto;
     background-color: aliceblue;
 }
-form{
+form {
     text-align: center;
     background-color: aquamarine;
     margin-left: 20%;
     margin-right: 20%;
 }
-.today{
+.today {
     background-color: wheat;
     width: 80vw;
-    height: 20vh;
+    height: 30vh;
     text-align: center;
     margin: 0 auto;
 }
@@ -46,17 +41,15 @@ form{
     height: 100%;
     width: 16%;
 }
-
-#cityNameBox{
+#cityNameBox {
     height: 100%;
     width: 20%;
     float: left;
     border: green solid 1px;
     font-size: 3rem;
-    padding-top: 30px;
-    
+    padding-top: 30px;    
 }
-#temperatureBox{
+#temperatureBox {
     border: green solid 1px;
     float: left;
     font-size: 64px;
@@ -72,40 +65,40 @@ form{
     font-size: 3rem;
     padding-top: 30px;
 }
-#humidityBox{
+#humidityBox {
     border: green solid 1px;
     float: left;
     font-size: 3rem;
     padding-top: 30px;
 }
-#windSpeedBox{
+#windSpeedBox {
     border: green solid 1px;
     float: left;
     font-size: 3rem;
     padding-top: 30px;
 }
 
-#imageParams{
+#imageParams {
     border: green solid 1px;
     float: left;
     display: block;
     height: 100%;
     width: 16%;
 }
-#wheatherBox{
+#wheatherBox {
     margin-right: 0;
     height: 30%;
     width: 100%;
     padding-top: 12px;
     font-weight: 300;
 }
-#imgW{
+#imgW {
     display: block;
     height: 70%;
     width: 100%;
 }
 
-h1{
+h1 {
     background-color: grey;
     padding: 0;
     margin: 0;
@@ -116,12 +109,35 @@ h1{
 
 /* tutaj zaczyna sie forecast */
 
-.forecast{
-    display: block;
+.forecast-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 3%;
+    padding-top: 5%;
     background-color: red;
-    height: 60vh;
+    height: 50vh;
     width: 80%;
     margin: 0 auto;
-  border: 1px solid red;
+    border: 1px solid white;
 
+}
+.forecast-for-one-day {
+    display: flex;
+    border: 1px solid green;
+    height: 200px;
+}
+.forecast {
+    width: 50%;
+    height: 100%;
+    border: 1px solid black;
+}
+.day {
+    background-color: rgb(219, 222, 223);
+}
+.night {
+    background-color: rgb(65, 62, 90);
+}
+/*forecast for easier work*/
+.weatherIcon img {
+    width: 80px;
 }
