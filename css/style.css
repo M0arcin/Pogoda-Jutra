@@ -99,7 +99,13 @@ form {
     font-weight: 300;
 }
 #weatherBox img{
-    width: 100px;
+    width: 80px;
+    height: 80px;
+}
+#weatherBox>p{
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1rem;
 }
 
 

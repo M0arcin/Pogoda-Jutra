@@ -25,7 +25,7 @@ function dayAndNight() {
           bodyColor1.style.backgroundColor = "#e3ecf2";
     } else {
           //Noc
-          var bodyColor2 = document.getElementById("simple1");
+          var bodyColor2 = document.querySelector('body');
           bodyColor2.style.backgroundColor = '#5d839c';
     }
 } dayAndNight();
