@@ -1,0 +1,174 @@
+* {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+body {
+    box-sizing: border-box;    
+    height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+}
+h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-top: 3%;
+}
+.wraper {
+    margin: auto;
+    height: 100vh;
+    width: 100vw;
+}
+.container {
+    display: inline-block;
+    width: 100vw;
+}
+h3 {
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 1% auto;
+}
+form {
+    text-align: center;
+    margin: 1% 20%;
+}
+.today {
+    width: 80vw;
+    height: 20vh;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.today p {
+    font-size: 2rem;
+}
+.condition {
+    height: 100%;
+    width: 16%;
+}
+#cityNameBox{
+    height: 100%;
+    width: 20%;
+    float: left;
+    border: green solid 1px;
+    font-size: 2rem;
+    padding-top: 30px;
+    inline-size: 20%;
+}
+#temperatureBox{
+    border: green solid 1px;
+    float: left;
+    font-size: 2rem;
+    display: inline-block;
+    font-weight: 300;
+    position: relative;
+    padding-top: 25px;
+    text-align: center;
+}
+#pressureBox {
+    border: green solid 1px;
+    float: left;
+    font-size: 2rem;
+    padding-top: 30px;
+}
+#humidityBox{
+    border: green solid 1px;
+    float: left;
+    font-size: 2rem;
+    padding-top: 30px;
+}
+#windSpeedBox{
+    border: green solid 1px;
+    float: left;
+    font-size: 2rem;
+    padding-top: 30px;
+}
+
+#imageParams{
+    border: green solid 1px;
+    float: left;
+    display: block;
+    height: 100%;
+    width: 16%;
+}
+#weatherBox{
+    margin-right: 0;
+    height: 30%;
+    width: 100%;
+    /*padding-top: 12px;*/
+    font-weight: 300;
+}
+#weatherBox img{
+    width: 80px;
+    height: 80px;
+}
+#weatherBox>p{
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1rem;
+}
+
+
+
+/* tutaj zaczyna sie forecast */
+
+.forecast-div {
+    box-sizing: border-box;
+    height: 50vh;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2%;
+    border: 1px solid red;
+}
+
+.forecast-container {
+    display: grid;
+    grid-template: 5vh 45vh / repeat(2, 1fr);
+    grid-template-areas: "date date" "day night";
+}
+.date {
+    grid-area: date;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid green;
+    
+}
+.date p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.weatherIcon img {
+    width: 80px;
+}
+/*.forecast > div {
+    width: 12.5%;
+    float: left;
+}*/
+/*.forecast .weatherIcon img {
+    align-self: center;
+}*/
+.forecast {
+    height: 100%;
+}
+.forecast p {
+    line-height: 1.5em;
+}
+.day {
+    grid-area: day;
+    background-color:#87CEFA;
+
+}
+.night {
+    grid-area: night;
+    background-color:#4169E1;
+}
+.forecast > .temperature {
+    font-size: 1.7rem;
+}
+

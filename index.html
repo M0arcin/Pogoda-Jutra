@@ -8,6 +8,114 @@
     <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css">
 </head>
 <body>
+    <div class="wraper">
+        <header>
+          <div id="mainHeader">
+              <h1> Pogoda Jutra </h1>
+          </div>
+        </header>
+
+        <div class="container" id="simple1">
+              <h3>Wybierz miasto</h3>
+          <form>
+              <input type="text" id="city">
+              <input type="submit" value="Szukaj">
+          </form>
+          <!--<button onclick="getLocation()">ikona lokalizacji</button> -->
+          <div class="today">
+            <div class="condition" id="cityNameBox"></div>
+            <div class="condition" id="temperatureBox"></div>
+            <div id="imageParams">
+                <div class="condition" id="weatherBox"></div>
+            </div>
+            <div class="condition" id="pressureBox"></div>
+            <div class="condition" id="humidityBox"></div>
+            <div class="condition" id="windSpeedBox"></div>
+          </div>
+          <!-- Forecast  -->
+
+          <div class="forecast-div">
+              <div class='forecast-container'>
+                <div class="date"></div>
+                <div class="forecast day">
+                    <div class="weatherIcon"></div>
+                    <p class="conditions-forecast"></p>
+                    <p class="temperature"></p>
+                    <p class='pressure'></p>
+                    <p class='humidity'></p>
+                    <p class='wind-speed'></p>
+                </div>
+                <div class="forecast night">
+                    <div class="weatherIcon"></div>
+                    <p class="conditions-forecast"></p>
+                    <p class="temperature"></p>
+                    <p class='pressure'></p>
+                    <p class='humidity'></p>
+                    <p class='wind-speed'></p>
+                </div>
+              </div>
+           <div class='forecast-container'>
+                <div class="date"></div>
+                <div class="forecast day">
+                    <div class="weatherIcon"></div>
+                    <p class="conditions-forecast"></p>
+                    <p class="temperature"></p>
+                    <p class='pressure'></p>
+                    <p class='humidity'></p>
+                    <p class='wind-speed'></p>
+                </div>
+                <div class="forecast night">
+                    <div class="weatherIcon"></div>
+                    <p class="conditions-forecast"></p>
+                    <p class="temperature"></p>
+                    <p class='pressure'></p>
+                    <p class='humidity'></p>
+                    <p class='wind-speed'></p>
+                </div>
+              </div>
+            <div class='forecast-container'>
+                <div class="date"></div>
+                <div class="forecast day" >
+                    <div class="weatherIcon"></div>
+                    <p class="conditions-forecast"></p>
+                    <p class="temperature"></p>
+                    <p class='pressure'></p>
+                    <p class='humidity'></p>
+                    <p class='wind-speed'></p>
+                </div>
+                <div class="forecast night">
+                    <div class="weatherIcon"></div>
+                    <p class="conditions-forecast"></p>
+                    <p class="temperature"></p>
+                    <p class='pressure'></p>
+                    <p class='humidity'></p>
+                    <p class='wind-speed'></p>
+                </div>
+            </div>
+            <div class='forecast-container'>
+                <div class="date"></div>
+                <div class="forecast day">
+                    <div class="weatherIcon"></div>
+                    <p class="conditions-forecast"></p>
+                    <p class="temperature"></p>
+                    <p class='pressure'></p>
+                    <p class='humidity'></p>
+                    <p class='wind-speed'></p>
+                </div>
+                <div class="forecast night">
+                    <div class="weatherIcon"></div>
+                    <p class="conditions-forecast"></p>
+                    <p class="temperature"></p>
+                    <p class='pressure'></p>
+                    <p class='humidity'></p>
+                    <p class='wind-speed'></p>
+                </div>
+            </div>
+          </div>
+          <!-- Forecast end-->
+          
+    </div>
+
     
     <div id="time"></div>
     <!-- Main js  -->
