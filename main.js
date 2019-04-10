@@ -22,11 +22,11 @@ function dayAndNight() {
     if (timer>6&&timer<=19) {
           //Dzien
           var bodyColor1 = document.getElementById("simple1");
-          bodyColor1.style.backgroundColor = "blue";
+          bodyColor1.style.backgroundColor = "#e3ecf2";
     } else {
           //Noc
           var bodyColor2 = document.getElementById("simple1");
-          bodyColor2.style.backgroundColor = 'pink';
+          bodyColor2.style.backgroundColor = '#5d839c';
     }
 } dayAndNight();
 
