@@ -5,11 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Pogoda Jutra</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css">
-</head>
+    </head>
 <body>
+   
+  <!--<div class="mainbackground"><img
+            src="pictures/mainbackground.jpg"
+            alt="mainbackground"></a>
+    </div> -->
+
+   
     <div class="wraper">
         <header>
+        <div id="time">
+        </div>
           <div id="mainHeader">
               <h1> Pogoda Jutra </h1>
           </div>
@@ -19,9 +29,13 @@
               <h3>Wybierz miasto</h3>
           <form>
               <input type="text" id="city">
-              <input type="submit" value="Szukaj">
+              <input id="btn" type="submit" value="Szukaj">
           </form>
           <!--<button onclick="getLocation()">ikona lokalizacji</button> -->
+
+          <div class="begin">
+              <h1> Witaj! <br> Jaka pogoda jest dzisiaj w Twoim mieście? </h1>
+          </div>
           <div class="today">
             <div class="condition" id="cityNameBox"></div>
             <div class="condition" id="temperatureBox"></div>
@@ -115,9 +129,16 @@
           <!-- Forecast end-->
           
     </div>
+    <div class="contact">
+        <h3>Tu nas znajdziesz: </h3>
+        <a class="facebook" href="#" target="_blank"
+            title="Facebook"><img height="40" weight="40" src="pictures/fb.png" /> </a>
+        <a class="instagram" href="#" target="_blank" title="Instagram"><img
+                height="40" weight="40" src="pictures/insta.png" /> </a>
+         <a class="snapchat" href="#" target="_blank" title="Snapchat"><img height="40" weight="40"
+                 src="pictures/snap.png" /> </a>
+    </div>
 
-    
-    <div id="time"></div>
     <!-- Main js  -->
     <script src="main.js"></script>
 </body>
