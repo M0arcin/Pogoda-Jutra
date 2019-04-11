@@ -7,12 +7,20 @@
 body {
     box-sizing: border-box;    
     height: 100vh;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
+}
+
+header{
+    background-image: url(https://cdn.pixabay.com/photo/2017/02/21/09/02/clouds-2085112_960_720.jpg);
+    background-size: cover;
+    border:black solid 1px;
 }
 h1 {
     text-align: center;
     font-size: 2.8rem;
     margin-top: 3%;
+    
+
 }
 .wraper {
     margin: auto;
@@ -32,12 +40,33 @@ form {
     text-align: center;
     margin: 1% 20%;
 }
+
+form input{
+    background-color:white;
+    width:300px;
+    height: 50px;
+    font-size: 30px;
+}
+#btn{
+    background-color: darkgrey;
+    width: 100px;
+    height: 50px;
+
+}
+#btn:hover{
+    background-color: #87CEFA;
+
+}
+
 .today {
+    visibility:hidden;
     width: 80vw;
     height: 20vh;
     text-align: center;
     margin: auto;
     margin-bottom: 30px;
+    background-image: url(https://cdn.pixabay.com/photo/2017/02/21/09/02/clouds-2085112_960_720.jpg);
+    background-size: cover;
 }
 .today p {
     font-size: 2rem;
@@ -50,13 +79,13 @@ form {
     height: 100%;
     width: 20%;
     float: left;
-    border: green solid 1px;
+    border: black solid 1px;
     font-size: 2rem;
     padding-top: 30px;
     inline-size: 20%;
 }
 #temperatureBox{
-    border: green solid 1px;
+    border: black solid 1px;
     float: left;
     font-size: 2rem;
     display: inline-block;
@@ -66,26 +95,26 @@ form {
     text-align: center;
 }
 #pressureBox {
-    border: green solid 1px;
+    border: black solid 1px;
     float: left;
     font-size: 2rem;
     padding-top: 30px;
 }
 #humidityBox{
-    border: green solid 1px;
+    border: black solid 1px;
     float: left;
     font-size: 2rem;
     padding-top: 30px;
 }
 #windSpeedBox{
-    border: green solid 1px;
+    border: black solid 1px;
     float: left;
     font-size: 2rem;
     padding-top: 30px;
 }
 
 #imageParams{
-    border: green solid 1px;
+    border: black solid 1px;
     float: left;
     display: block;
     height: 100%;
@@ -113,6 +142,7 @@ form {
 /* tutaj zaczyna sie forecast */
 
 .forecast-div {
+    visibility:hidden;
     box-sizing: border-box;
     height: 50vh;
     width: 90%;
@@ -121,7 +151,7 @@ form {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2%;
-    border: 1px solid red;
+    /*border: 1px solid black;*/
 }
 
 .forecast-container {
@@ -135,7 +165,9 @@ form {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid green;
+    border: 1px solid black;
+    background-image: url(https://cdn.pixabay.com/photo/2017/02/21/09/02/clouds-2085112_960_720.jpg);
+    background-size: cover;
     
 }
 .date p {
@@ -172,3 +204,33 @@ form {
     font-size: 1.7rem;
 }
 
+#time{
+    text-align:center;
+    font-size: 3rem;
+    font-family: 'VT323',
+    monospace;
+}
+
+.contact{
+    background-color: darkgrey;
+    padding: 1.5rem;
+    border: black solid 1px;
+    text-align: center;
+}
+
+.begin{
+    background-image: url(https://cdn.pixabay.com/photo/2017/02/21/09/02/clouds-2085112_960_720.jpg);
+    background-size: cover;
+    text-align: center;
+    height: 20rem;
+    width: 100%;
+    position: absolute;
+}
+.begin h1{
+    text-align: center;
+}
+
+ @media only screen and (min-width: 0px) {
+     .body {
+         width: auto;
+     }
