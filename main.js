@@ -38,10 +38,17 @@ let submit = document.querySelector('input[type="submit"]');
 
 submit.addEventListener('click', getCity);
 
+
 function getCity (e) {
     e.preventDefault();
     let cityNameFromSearchWindow = document.getElementById("city").value;
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityNameFromSearchWindow}&units=metric&lang=pl&appid=64bff84570f2309bb275adddc338b250`;
+    let begin = document.querySelector('.begin');
+    begin.style.visibility = 'hidden';
+    let today = document.querySelector('.today');
+    today.style.visibility = 'visible';
+    let forecasts = document.querySelector('.forecast-div');
+    forecasts.style.visibility = 'visible';
     
     fetch(url)
         .then((response) => {
